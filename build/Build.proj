@@ -48,7 +48,7 @@
        <TestAssemblies Include="$(Root)test\**\bin\$(Configuration)\**\*.Tests.dll;$(Root)test\**\bin\$(Configuration)\**\*.Tests.Acceptance.dll" />
     </ItemGroup>
     
-    <xunit Assemblies="@(TestAssemblies)" Xml="$(ArtifactsPath)TestResults.xml" shadowCopy="false"/>
+    <xunit Assemblies="@(TestAssemblies)" ShadowCopy="false" Xml="$(ArtifactsPath)TestResults.xml"/>
   </Target>
 
   <Target Name="Package" DependsOnTargets="Test; BuildNuGetPackages; BuildChocolateyPackage" />
