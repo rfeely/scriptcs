@@ -156,7 +156,7 @@ namespace ScriptCs.Engine.Roslyn
                 var result = GetScriptState(code, globals);
                 _log.Debug("Finished execution");
                 sessionState.Session = result;
-                return new ScriptResult(returnValue: result.ReturnValue);
+                return new ScriptResult(returnValue: result.ReturnValue); // new comment
             }
             catch (AggregateException ex)
             {
