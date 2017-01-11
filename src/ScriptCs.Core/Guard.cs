@@ -1,3 +1,4 @@
+
 namespace ScriptCs
 {
     using System;
