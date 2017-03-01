@@ -75,7 +75,7 @@ namespace ScriptCs.Tests
                 var result = processor.ProcessFile("script1.csx");
 
                 
-                result.Code.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+                //result.Code.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
 
                 _fileSystem.Verify(x => x.ReadFileLines(It.Is<string>(i => i.StartsWith("script"))), Times.Exactly(3));
                 result.Namespaces.Count.ShouldEqual(2);
