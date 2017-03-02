@@ -68,6 +68,7 @@ namespace ScriptCs.Tests
                 _fileSystem.Setup(fs => fs.GetFullPath(It.IsAny<string>())).Returns<string>((path) => path);
             }
             
+            
 
             [Fact]
             public void MultipleUsingStatementsShouldProduceDistinctOutput()
